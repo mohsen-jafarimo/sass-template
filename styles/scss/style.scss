@@ -1,4 +1,62 @@
-$textColor:#654fef;
-h2{
-    color: $textColor ;
+@import "variables";
+@import "mixins";
+
+*{
+@include defaultStyles;
+}
+body{
+    direction: rtl;
+    text-align: right;
+}
+header{
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+
+    h2{
+        color: $secondaryColor;
+    }
+    .menu-icon{
+        color: $secondaryColor;
+        display: none;
+    }
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    ul{
+    display: flex;
+
+    li{
+        padding: 5px 10px;
+        align-self: center;
+
+        a{
+            @include textStyle($secondaryColor , bold , 1rem);
+            transition: all .15s ease-in;
+            &:hover{
+             color: $blackColor;
+            }
+        }
+    }
+}}
+
+@include media(M){
+    header {
+        .menu-icon{
+            display: flex;
+        }
+    }
+    .navbar{
+        display: none;
+}
+
 }
