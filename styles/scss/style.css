@@ -116,6 +116,50 @@ main p {
   margin-top: 10px;
 }
 
+.cards {
+  background-color: #edf2f7;
+  display: flex;
+  overflow: scroll;
+  margin: 20px auto;
+}
+.cards .card {
+  border-radius: 8px;
+  padding: 20px;
+  font-weight: bold;
+  margin: 20px;
+  background-color: #fff;
+}
+.cards .card img {
+  width: 100%;
+}
+.cards .card h4 {
+  color: #654fef;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 8px 0;
+}
+.cards .card p {
+  color: #202020;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.cards .card span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #654fef;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: left;
+  margin-top: 12px;
+  display: inline-block;
+  transition: all 0.15s ease-in;
+}
+.cards .card span:hover {
+  background-color: #fff;
+  color: #654fef;
+}
+
 @media (max-width: 768px) {
   header .menu-icon {
     display: flex;
@@ -143,5 +187,8 @@ main p {
   main img {
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .cards {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

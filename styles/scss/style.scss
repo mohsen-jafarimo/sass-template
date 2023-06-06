@@ -96,6 +96,42 @@ main{
     }
   }
 
+  .cards{
+    background-color: $bodyColor;
+    display: flex;
+    overflow: scroll;
+    margin:  20px auto;
+    .card{
+        @include boxStyle;
+        background-color: $secondaryColor;
+        img{
+            width: 100%;
+        }
+        h4{
+            @include textStyle($primaryColor , bold , 1rem);
+            margin: 8px 0;
+        }
+        p{
+            @include textStyle($blackColor , 100 , 1rem);
+
+        }
+        span{
+            @include textStyle($secondaryColor , bold , 1rem);
+            background-color: $primaryColor;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: left;
+            margin-top: 12px;
+            display: inline-block;
+            transition: all .15s ease-in;
+            &:hover{
+                background-color: $secondaryColor;
+                color: $primaryColor;
+            }
+        }
+    }
+  }
+
 @include media(M){
     header {
         .menu-icon{
@@ -126,6 +162,10 @@ main{
         width: fit-content;
 
     }
+}
+
+.cards{
+    flex-direction: column;
 }
 
 }
