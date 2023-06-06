@@ -57,6 +57,7 @@ header .menu-icon {
   display: flex;
   justify-content: space-between;
   background-color: #edf2f7;
+  margin: 2rem 3rem;
 }
 .main img {
   width: 300px;
@@ -160,6 +161,32 @@ main p {
   color: #654fef;
 }
 
+footer {
+  border-radius: 8px;
+  padding: 20px;
+  font-weight: bold;
+  margin: 20px;
+  background-color: #654fef;
+}
+footer .social-icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  margin: 20px 200px;
+}
+footer .links a {
+  color: #fff;
+  margin: 7px 0;
+  transition: all 0.15s ease-in;
+}
+footer .links a:hover {
+  color: #202020;
+}
+
 @media (max-width: 768px) {
   header .menu-icon {
     display: flex;
@@ -190,5 +217,21 @@ main p {
   }
   .cards {
     flex-direction: column;
+  }
+  footer .links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  footer .links a {
+    margin: 4px 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
 }/*# sourceMappingURL=style.css.map */

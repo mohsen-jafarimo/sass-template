@@ -55,7 +55,7 @@ header{
     display: flex;
     justify-content: space-between;
     background-color: $bodyColor;
-    // margin: 2rem 3rem;
+    margin: 2rem 3rem;
     img{
 
         @include imgStyles(300px , 10px , 300px)
@@ -131,6 +131,29 @@ main{
         }
     }
   }
+  footer{
+    @include boxStyle;
+    background-color: $primaryColor;
+    .social-icons{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .links{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        margin: 20px 200px;
+            a{
+                color: $secondaryColor;
+                margin: 7px 0;
+                transition: all .15s ease-in;
+                &:hover{
+                 color: $blackColor;       
+                }
+            }
+    }
+}
+
 
 @include media(M){
     header {
@@ -167,5 +190,23 @@ main{
 .cards{
     flex-direction: column;
 }
-
+ footer{
+    .links{
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0;
+        a{
+margin: 4px 10px;
+        }
+    }
+ }
+}
+@include media(L){
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
